@@ -1,12 +1,7 @@
 # Environment Setup
 
-### Prerequisites
 
-* **AWS Account**: Given that you will be simulating attacks and doing remediations, you should run this in a non-production account. After running through these scenarios, you can look at how you can implement GuardDuty and associated automated remediation workflows in a multi-account structure so you are able to aggregate findings from other accounts and use the service in a more scalable manner. 
-* **Admin privileges**: Ensure you are using an AWS IAM User with Admin privileges.
-* **AWS CLI**: You will be using the AWS CLI for simulating one of the attacks so be sure you have installed on your local machine.
-
-> All of the links assume you are using the **us-west-2 (Oregon)** region.
+> All of the links assume you are using the **ap-southeast-1 (Singapore)** region.
 
 ## Getting Started – Just Two Clicks
 
