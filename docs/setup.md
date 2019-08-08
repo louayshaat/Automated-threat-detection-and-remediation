@@ -42,13 +42,12 @@ GuardDuty sends notifications based on Amazon CloudWatch Events when any change 
 ## Deploy the environment
 
 "Event Engine"
->
-    1. Navigate to the <a href="https://dashboard.eventengine.run" target="_blank">Event Engine dashboard</a>
-    2. Enter your **team hash** code. 
-    3. Launch CloudFormation Stack [Build](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=GuardDuty-Hands-On&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/guardduty-hands-on/guardduty-cfn-template.yml) to setup the GuardDuty environment
-    4. Click the **Deploy to AWS** button above.  This will automatically take you to the console to run the template.
-    5. Click **Next** on the **Specify Template**, **Specify Details**, and **Options** sections.
-    6. Finally, acknowledge that the template will create IAM roles under **Capabilities** and click **Create**.
+*  Navigate to the [Event Engine dashboard](https://dashboard.eventengine.run)
+*  Enter your **team hash** code. 
+*  Launch CloudFormation Stack [Build](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=GuardDuty-Hands-On&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/guardduty-hands-on/guardduty-cfn-template.yml) to setup the GuardDuty environment
+*  Click the **Deploy to AWS** button above.  This will automatically take you to the console to run the template.
+*  Click **Next** on the **Specify Template**, **Specify Details**, and **Options** sections.
+*  Finally, acknowledge that the template will create IAM roles under **Capabilities** and click **Create**.
 
 This will bring you back to the CloudFormation console. You can refresh the page to see the stack starting to create. Before moving on, make sure the stack is in a **CREATE_COMPLETE**.
 
