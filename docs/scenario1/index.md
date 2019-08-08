@@ -93,7 +93,7 @@ Next, double check the effects of the remediation to ensure the instance is isol
 
 **info "Which data source did GuardDuty use to identify this threat?"**
 
-**info "Will isolating the instance have any effect on an application running on the instance?" **
+**info "Will isolating the instance have any effect on an application running on the instance?"**
 	
 **info "How could you add more detail to the email notifications?"**
 
