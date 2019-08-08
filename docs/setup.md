@@ -41,10 +41,10 @@ GuardDuty sends notifications based on Amazon CloudWatch Events when any change 
 
 ## Deploy the environment
 
-"Event Engine"
 *  Navigate to the [Event Engine dashboard](https://dashboard.eventengine.run)
 *  Enter your **team hash** code. 
 *  Launch CloudFormation Stack [Build](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=GuardDuty-Hands-On&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/guardduty-hands-on/guardduty-cfn-template.yml) to setup the GuardDuty environment
+*  Enter your email address to recieve the notifications
 *  Click the **Deploy to AWS** button above.  This will automatically take you to the console to run the template.
 *  Click **Next** on the **Specify Template**, **Specify Details**, and **Options** sections.
 *  Finally, acknowledge that the template will create IAM roles under **Capabilities** and click **Create**.
@@ -67,6 +67,8 @@ The CloudFormation template will create the following resources:
   * [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html) value for storing a fake database password.
 
 > Make sure the CloudFormation stack is in a **CREATE_COMPLETE** status before moving on.
+
+> **Make sure you confirm the subscription you recieved in your inbox**
 
 ### Generate a finding manually
 
@@ -130,8 +132,6 @@ aws dynamodb put-item --table-name GuardDuty-Example-Customer-DB --item '{"name"
 
 aws dynamodb scan --table-name GuardDuty-Example-Customer-DB --profile attacker
 
-aws dynamodb delete-table --table-name GuardDuty-Example-Customer-DB --profile attacker
-
 aws dynamodb list-tables --profile attacker
 ```
 
@@ -143,5 +143,4 @@ aws ssm get-parameters --names "gd_prod_dbpwd_sample" --profile attacker
 
 aws ssm get-parameters --names "gd_prod_dbpwd_sample" --with-decryption --profile attacker
 
-aws ssm delete-parameter --name "gd_prod_dbpwd_sample" --profile attacker
 ```
