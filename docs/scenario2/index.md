@@ -1,8 +1,9 @@
-#Compromised IAM credentials (simulated)
+# Scenario 2 - IAM Usage
+
 
 You have completed the examination of the first attack, confirmed it was properly remediated, and then sat back to take your first sip of coffee for the day when you notice an additional email about new findings. The first of the new findings indicates that an API call was made using AWS IAM credentials from an IP address on a custom threat list. 
 
-??? info "Scenario Note"
+**info "Scenario Note"**
 	None of your IAM credentials have actually been compromised or exposed in any way. The finding is the result of an EC2 instance using an IAM Users credentials to make API calls and the EIP for the instance is on your custom threat list.
 
 ## Diagram of the simulated attack and detection
@@ -52,9 +53,12 @@ Since Alice did not setup a remediation for this finding, you have to manually r
 
 ## Questions
 
-!!! info "Which data source did GuardDuty use to identity this threat?"
+**info "Which data source did GuardDuty use to identity this threat?"**
 
-!!! info "What permissions did the user have?"
+**info "What permissions did the user have?"**
 
-!!! info "Why would the security team decide against setting up an automated remediation?"
+**info "Why would the security team decide against setting up an automated remediation?"**
 
+## Proceed to Scenario 3:
+
+[Scenario 3](https://github.com/securityroadshow/amazon-guardduty-hands-on/blob/master/docs/scenario3/index.md)
