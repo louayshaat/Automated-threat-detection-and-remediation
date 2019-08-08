@@ -47,7 +47,7 @@ The finding type indicates that an EC2 instance in your environment is communica
   
 Alice used CloudWatch Event Rules to send the email you received about the findings and also to take remediations steps. Examine the CloudWatch Events console to understand what Alice configured and to see how the remediation was triggered. 
 
-1.  Navigate to the [CloudWatch console](https://us-west-2.console.aws.amazon.com/cloudwatch/home?) (us-west-2) and on the left navigation, under the **Events** section, click **Rules**. 
+1.  Navigate to the [CloudWatch console](https://ap-southeast-1.console.aws.amazon.com/cloudwatch/home?) (ap-southeast-1) and on the left navigation, under the **Events** section, click **Rules**. 
 
     > You will see three Rules in the list that were created by the CloudFormation template. All of these begin with the prefix “*GuardDuty-Event*."
 
