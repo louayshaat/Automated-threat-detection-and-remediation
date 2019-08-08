@@ -1,4 +1,4 @@
-# Compromised EC2 Instance
+# Scenario 1 - Compromised EC2 Instance
 
 ## Scene simulation
 
@@ -91,9 +91,13 @@ Next, double check the effects of the remediation to ensure the instance is isol
 
 ## Questions
 
-!!! info "Which data source did GuardDuty use to identify this threat?"
+**info "Which data source did GuardDuty use to identify this threat?"**
 
-!!! info "Will isolating the instance have any effect on an application running on the instance?"
+**info "Will isolating the instance have any effect on an application running on the instance?" **
 	
-!!! info "How could you add more detail to the email notifications?"
-	
+**info "How could you add more detail to the email notifications?"**
+
+
+## Proceed to Scenario 2:
+
+[Scenario 2](https://github.com/securityroadshow/amazon-guardduty-hands-on/blob/master/docs/scenario2/index.md)
