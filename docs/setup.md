@@ -144,3 +144,6 @@ aws ssm get-parameters --names "gd_prod_dbpwd_sample" --profile attacker
 aws ssm get-parameters --names "gd_prod_dbpwd_sample" --with-decryption --profile attacker
 
 ```
+## Proceed to Scenario 1:
+
+[Scenario 1](https://github.com/securityroadshow/amazon-guardduty-hands-on/blob/master/docs/scenario1/index.md)
