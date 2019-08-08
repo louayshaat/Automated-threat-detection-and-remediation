@@ -24,7 +24,7 @@ When Alice setup the hook for notifications she only included certain informatio
 
 > Although you can view the GuardDuty findings in the console, most customers aggregate all findings across their regions and accounts to a central security information and event management (SIEM) system for analysis and remediation.  A common approach for aggregating these findings is to setup GuardDuty in a [Master/Member](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_accounts.html) structure and then use a workflow including CloudWatch Event Rules and Lambda Functions to push findings to your SIEM or a centralized logging framework.  There are also partner solutions that publish Lambda Function Blueprints to make it easier to consolidate findings.
 
-1. Navigate to the [GuardDuty console](https://us-west-2.console.aws.amazon.com/guardduty/home?) (us-west-2).
+1. Navigate to the [GuardDuty console](https://ap-southeast-1.console.aws.amazon.com/guardduty/home?) (ap-southeast-1).
 > If there is nothing displayed click the refresh button.
 
 2. A finding should show up with the type **UnauthorizedAccess:EC2/MaliciousIPCaller.Custom**. 
@@ -73,7 +73,7 @@ Collapse the **Designer** tab and scroll down to view the code for this function
 
 Next, double check the effects of the remediation to ensure the instance is isolated.  At this point you have the instance ID of the compromised instance from the email notifications and the name of the isolation security group name from reviewing the Lambda Function code.
 
-1.	Browse to the [EC2 console](https://us-west-2.console.aws.amazon.com/ec2/v2) (us-west-2) and click **Running Instances**.
+1.	Browse to the [EC2 console](https://ap-southeast-1.console.aws.amazon.com/ec2/v2) (ap-southeast-1) and click **Running Instances**.
    
     > You should see three instances with names that begin with **GuardDuty-Example**.
 
