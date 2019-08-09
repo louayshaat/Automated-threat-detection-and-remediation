@@ -69,6 +69,7 @@ You should see a response that states that there is an explicit deny for that ac
 ## Questions
 
 **What are the risks involved with this remediation?**
+
 **What other EC2 instances are using this Role?**
 
 ## Summary:
