@@ -2,7 +2,7 @@
 
 After manually remediating the previous GuardDuty finding, you have finally finished your first cup of coffee when an email notification comes in alerting you to yet another finding.  You finish reading the first email and then a minute or so later you see the relevant remediation email, meaning Alice has already put in place a remediation for this finding.  The other findings you looked at dealt with EC2 instances and AWS IAM credentials separately, but this finding appears to be related to an AWS IAM Role associated with an EC2 instance.  You decide to take a closer look at the finding and remediation.
 
-**info "Scenario Note"**
+**Scenario Note**
 	None of your IAM credentials have actually been compromised or exposed in any way. The finding was triggered when you used AWS Systems Manager for accessing the temporary security credentials of the EC2 instance and then ran a number of CLI commands locally from your computer.
 
 ## Investigation
@@ -68,8 +68,8 @@ You should see a response that states that there is an explicit deny for that ac
 
 ## Questions
 
-**info "What are the risks involved with this remediation?"**
-**info "What other EC2 instances are using this Role?"**
+**What are the risks involved with this remediation?**
+**What other EC2 instances are using this Role?**
 
 ## Summary:
 
