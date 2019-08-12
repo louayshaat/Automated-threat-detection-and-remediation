@@ -43,7 +43,8 @@ GuardDuty sends notifications based on Amazon CloudWatch Events when any change 
 
 *  Navigate to the [Event Engine dashboard](https://dashboard.eventengine.run)
 *  Enter your **team hash** code. 
-*  Launch CloudFormation Stack [Build](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=GuardDuty-Hands-On&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/guardduty-hands-on/guardduty-cfn-template.yml) to setup the GuardDuty environment
+*  Login to the AWS Console
+*  Click this link [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=GuardDuty-Hands-On&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/guardduty-hands-on/guardduty-cfn-template.yml) to setup the GuardDuty environment
 *  Enter your email address to recieve the notifications
 *  Click the **Deploy to AWS** button above.  This will automatically take you to the console to run the template.
 *  Click **Next** on the **Specify Template**, **Specify Details**, and **Options** sections.
