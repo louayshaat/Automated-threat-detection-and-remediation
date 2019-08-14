@@ -64,36 +64,36 @@ To simulate this last and final attack you will need to retrieve the IAM tempora
 Nagivate to Cloud9 and launch the IDE as you've done in Lab2 and run the following commands.
 
 ```
-aws iam get-user --profile attacker
+aws iam list-users
 
-aws iam create-user --user-name Chuck --profile attacker
+aws iam create-user --user-name Chuck
 ```
 
 **What about DynamoDB?**
 ```
-aws dynamodb list-tables --profile attacker
+aws dynamodb list-tables
 
-aws dynamodb describe-table --table-name GuardDuty-Example-Customer-DB --profile attacker
+aws dynamodb describe-table --table-name GuardDuty-Example-Customer-DB
 ```
 
 **Can you query the data?**
 ```
-aws dynamodb scan --table-name GuardDuty-Example-Customer-DB --profile attacker
+aws dynamodb scan --table-name GuardDuty-Example-Customer-DB
 
-aws dynamodb put-item --table-name GuardDuty-Example-Customer-DB --item '{"name":{"S":"Joshua Tree"},"state":{"S":"Michigan"},"website":{"S":"https://www.nps.gov/yell/index.htm"}}' --profile attacker
+aws dynamodb put-item --table-name GuardDuty-Example-Customer-DB --item '{"name":{"S":"Joshua Tree"},"state":{"S":"Michigan"},"website":{"S":"https://www.nps.gov/yell/index.htm"}}'
 
-aws dynamodb scan --table-name GuardDuty-Example-Customer-DB --profile attacker
+aws dynamodb scan --table-name GuardDuty-Example-Customer-DB
 
-aws dynamodb list-tables --profile attacker
+aws dynamodb list-tables
 ```
 
 **Do you have access to Systems Manager Parameter Store?**
 ```
-aws ssm describe-parameters --profile attacker
+aws ssm describe-parameters
 
-aws ssm get-parameters --names "gd_prod_dbpwd_sample" --profile attacker
+aws ssm get-parameters --names "gd_prod_dbpwd_sample"
 
-aws ssm get-parameters --names "gd_prod_dbpwd_sample" --with-decryption --profile attacker
+aws ssm get-parameters --names "gd_prod_dbpwd_sample" --with-decryption
 
 ```
 ## Proceed to Scenario 1:
