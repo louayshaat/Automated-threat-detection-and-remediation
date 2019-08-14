@@ -66,7 +66,7 @@ Replace <access_key>, <secret_key> and <session_token> with the values you captu
 
      
      aws configure set profile.attacker.region ap-southeast-1
-     aws configure set profile.attacker.aws_access_key_id <access_key> 
+     aws configure set profile.attacker.aws_access_key_id <span style=“color:green;”> access_key </span> 
      aws configure set profile.attacker.aws_secret_access_key <secret_key> 
      aws configure set profile.attacker.aws_session_token <session_token>
      
