@@ -60,9 +60,11 @@ To simulate this last and final attack you will need to retrieve the IAM tempora
 
 **Lets use the keys and run some queries**
 
-Nagivate to Cloud9 and launch the IDE as you've done in Lab2 and lets update the AWS keys and use the ones associated with the ec2 Role.
+The following commands will need to be run from outside the AWS environment for the trigger to take effect.
+Please ensure that you have the AWSCLI installed, if not please follow the documentation below to install it
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
 
-Replace <access_key>, <secret_key> and <session_token> with the values you captured from Session Manager and run the following commands
+Once the AWSCLI is installed, replace <access_key>, <secret_key> and <session_token> with the values you captured from Session Manager and run the following commands
 
      
      aws configure set profile.attacker.region ap-southeast-1
@@ -72,6 +74,7 @@ Replace <access_key>, <secret_key> and <session_token> with the values you captu
      
 
 **Do you have any IAM permissions:**
+
 
 ```
 aws iam list-users --profile attacker
