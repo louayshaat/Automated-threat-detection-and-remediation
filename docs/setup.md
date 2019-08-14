@@ -17,7 +17,7 @@ This will bring you back to the CloudFormation console. You can refresh the page
 
 The initial findings will begin to show up in GuardDuty 10 minutes after the CloudFormation stack creation completes. 
 ###
-**![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Note: Please ensure you confirm the subscription you revieved in your inbox so you can recieve notifiactions as the lab progresses**
+**![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Note: Please ensure you confirm the subscription you received in your inbox so you can receive notifications as the lab progresses**
 
 ### What is created?
 
