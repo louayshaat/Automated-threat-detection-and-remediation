@@ -56,25 +56,11 @@ To simulate this last and final attack you will need to retrieve the IAM tempora
 
 5. Make note of the **AccessKeyID**, **SecretAccessKey**, and **Token**.
 
-### Create a new AWS CLI profile on your laptop to use the IAM temporary credentials 
-
-Now that you have retrieved the IAM temporary security credentials you will need to add them to an AWS CLI profile. There are a number of ways to do this, but below are some commands to help get you started:
-
-From a command prompt, run the following commands (replace the variables with your credentials):
-```
-aws configure set profile.attacker.region ap-southeast-1
-aws configure set profile.attacker.aws_access_key_id <access_key>
-aws configure set profile.attacker.aws_secret_access_key <secret_key>
-aws configure set profile.attacker.aws_session_token <session_token>
-```
-
-If you view your local aws credentials file, you should now see an [attacker] profile with the stolen IAM temporary credentials.
-
-### Run commands using the IAM temporary credentials
-
-Now that you have your named profile you can use it to make API calls. Use the commands below to query different services to see what you have access to (don't be surprised if you see some access denied responses):
 
 **Do you have any IAM permissions:**
+
+Nagivate to Cloud9 and launch the IDE as you've done in Lab2 and run the following commands.
+
 ```
 aws iam get-user --profile attacker
 
