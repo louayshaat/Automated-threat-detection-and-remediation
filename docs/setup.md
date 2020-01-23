@@ -1,7 +1,7 @@
 # Environment Setup
 
 
-> All of the links assume you are using the **ap-southeast-1 (Singapore)** region.
+> All of the links assume you are using the **ap-southeast-2 (Sydney)** region.
 ## Deploy the environment
 
 *  Navigate to the [Event Engine dashboard](https://dashboard.eventengine.run)
